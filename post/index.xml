@@ -12,13 +12,12 @@
     
     
     <item>
-      <title>Myblog</title>
+      <title>Blog building</title>
       <link>https://netwchao.github.io/post/emoji-support/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://netwchao.github.io/post/emoji-support/</guid>
-      <description> 网站搭建初心 在硕士学习期间，在面对各种困难查找各种学习资料时，总能闯入一些专业内大佬的博客，博文内容丰富且网页酷炫，在此感谢他们曾为我的学习提供过的帮助。也是受大佬们的影响， 自己也有了搭建博客的想法，毕竟要向大佬看齐，找到宣传的平台，没有平台自己做平台吧。可由于时间和自己能力不足，尝试了几次都没有搭建成功。而最近老板布置了个给实验室搭建网站的任务，这不得不让我重操旧业，继续摸索网页搭建流程。通过不断查找资料摸索，终于把实验 室网站搭建好，但却部署在了其它平台上，本是想用github部署网页的，直到今天才解决网页主题渲染格式混乱的问题。我也是不容易，一直想通过github部署，苦战几天没弄成，结果网站搭建好了，突然发现github部署又可以了， 代码就是这么神奇，也许你的困惑就是一个中英标点的不同，当然github部署格式乱码不是标点问题。特此写篇博文纪念一下网页搭建的成功。
- </description>
+      <description>Website construction During the master&amp;rsquo;s study, when facing various difficulties in finding various learning materials, I can always break into the blogs of some professional bigwigs. The blog posts are rich in content and the web pages are cool. I would like to thank them for providing them for my study. help. Is also influenced by the big brothers,I also have the idea of building a blog. After all, I have to keep up with the big guys and find a platform for publicity.</description>
     </item>
     
     <item>
