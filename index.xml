@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>服务器集群使用方法</title>
+      <link>https://netwchao.github.io/post/creating-a-new-theme/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/creating-a-new-theme/</guid>
+      <description>集群使用方法 1 2 3 4 5 6 7 8 9 10  作业控制 作业监测 qsub：提交作业 qstat：显示作业 qdel：取消作业 showq： 查看所有作业 qsig：给作业发送信号 pestat：各节点使用情况 pbsnodes：列出集群中所有节点的状态和属性 qhold：挂起作业 qrls：释放挂起的作业 qrerun：重新运行作业 qmove：将作业移动到另一个队列 qalter： 更改作业资源属性   PBS命令大全 1、qalter 更改作业属性 语法：qalter [-a date_time] [-A account_string] [-e path] [-h hold_list] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-M user_list] [-N name] [-o path] [-p priority] [-r c] [-u user_list] job_identifier&amp;hellip;
+举例：1. 更改批处理作业的运行时间属性。
+ $ qalter -a 0309251000 23.</description>
+    </item>
+    
+    <item>
       <title>Blog building</title>
       <link>https://netwchao.github.io/post/emoji-support/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
@@ -29,16 +40,6 @@
       <description>The blogger is currently a PhD student, and his main research direction is bioinformatics.
  BACKGROUND
  Huazhong Agricultural University-Shenzhen Institute of Genomics, Co-cultivation PhD student Huazhong Agricultural University，Animal genetic breeding and reproduction，Master of Agriculture Hunan Agricultural University，Animal Science，Bachelor of Agriculture   GitHub详情.</description>
-    </item>
-    
-    <item>
-      <title>Creating a New Theme</title>
-      <link>https://netwchao.github.io/post/creating-a-new-theme/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>https://netwchao.github.io/post/creating-a-new-theme/</guid>
-      <description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description>
     </item>
     
     <item>
