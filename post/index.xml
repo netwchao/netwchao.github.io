@@ -42,6 +42,15 @@ This document is a brief primer on using Go templates.</description>
     </item>
     
     <item>
+      <title>ATAC-seq学习资料整理</title>
+      <link>https://netwchao.github.io/post/atac-seq/</link>
+      <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/atac-seq/</guid>
+      <description>ATAC-seq学习  学习资料收集   用Y叔的ChIPseeker对peaks进行注释和可视化用IDR对重复样本peaks的一致性进行了评估，同时得到了merge后的一致性的peaks——sample-idr，接下来就是对peaks的注释。    基因组各种版本对应关系    用IDR软件处理生物学重复的peak    ATAC标准流程encode项目发布    Homer找DNA的motif    ATAC-seq 分析（上）    motif分析——从实战到原理（Homer篇）    2020-04-09重新学习Y叔的ChIPseeker系列    第9篇：差异peaks分析——DiffBind    CHIP-SEQ 芯片分析时，对于来自重复实验的数据，怎样进行MACS peaks calling 分析？    第6篇：重复样本的处理——IDR    学习一遍ChIPseeker的使用  </description>
+    </item>
+    
+    <item>
       <title>Getting Started with Hugo</title>
       <link>https://netwchao.github.io/post/hugoisforlovers/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
