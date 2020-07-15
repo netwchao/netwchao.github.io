@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  <title>服务器集群使用方法 | Wlecome to Wang Chao&#39;s blog</title>
+  <meta charset='utf-8'>
+  <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+  <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
+<meta name = 'keywords' content = 'Wlecome to Wang Chao&#39;s blog'>
+<meta property = 'og:locale' content = 'en_US' />
+<meta property = 'og:type' content = 'article' />
+<meta property = 'og:title' content = '服务器集群使用方法' />
+<meta property = 'og:description' content = '集群使用方法 1 2 3 4 5 6 7 8 9 10  作业控制 作业监测 qsub：提交作业 qstat：显示作业 qdel：取消作业 showq： 查看所有作业 qsig：给作业发送信号 pestat：各节点使用情况 pbsnodes：列出集群中所有节点的状态和属性 qhold： …'>
+<meta property = 'og:url' content = 'https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/' />
+<meta property = 'og:image' content = 'https://netwchao.github.io/images/boy.jpg'/>
+<link rel='apple-touch-icon' sizes='180x180' href='https://netwchao.github.io/images/icons/apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='https://netwchao.github.io/images/icons/favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='https://netwchao.github.io/images/icons/favicon-16x16.png'>
+<link rel='manifest' href='https://netwchao.github.io/images/icons/site.webmanifest'>
+<meta name='msapplication-TileColor' content='#da532c'>
+<meta name='theme-color' content='#ffffff'>
+
+  <link rel='canonical' href='https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/'>
+  <link rel = 'stylesheet' href = 'https://netwchao.github.io/css/main.fd1b52c15e94a2823f837dcf6644426493d148448ae3cdef45af631024456781e69564507e29a0e8a35ab6266cb5974acfc5b59bf86943662cab24d15ce2c3a0.css' integrity = 'sha512-/RtSwV6UooI/g33PZkRCZJPRSESK483vRa9jECRFZ4HmlWRQfimg6KNatiZstZdKz8W1m/hpQ2YsqyTRXOLDoA=='>
+</head>
+
+  <body>
+    <div class = 'nav-drop'>
+  <div class = 'nav-body'>
+      <a href = 'https://netwchao.github.io/about/' class = 'nav_item'>About</a>
+      <a href = 'https://netwchao.github.io/' class = 'nav_item'>Blog</a>
+      <a href = 'https://netwchao.github.io/categories' class = 'nav_item'>Category</a>
+      <a href = 'https://netwchao.github.io/tags' class = 'nav_item'>Tag</a>
+    <div class = 'nav-close'></div><div class = 'color_mode'>
+<label for = 'mode'>Toggle Dark Mode</label>
+<input type = 'checkbox' class = 'color_choice' id = 'mode'>
+</div>
+
+  </div>
+</div><header class = 'nav' >
+  <nav class = 'nav-menu'>
+    <a href='https://netwchao.github.io/' class = 'nav-brand nav_item'>Wlecome to Wang Chao&#39;s blog</a>
+    <div class = 'nav_bar-wrap'>
+      <div class = 'nav_bar'></div>
+    </div>
+  </nav>
+</header>
+
+
+    <main>
+      
+  <div class = 'wrap mt post'>
+    <div><p class = 'post_date pale'>15. July 2020</p>
+      <h1 class = 'post_title'>服务器集群使用方法</h1>
+      <div class = 'post_body'>
+        <div class = 'post_inner'>
+        
+          <img src = 'https://netwchao.github.io/images/boy.jpg' alt = 'boy.jpg' class = 'post_thumbnail'>
+        
+          <hr>
+<h3 id="center集群使用方法center"><!-- raw HTML omitted -->集群使用方法<!-- raw HTML omitted --></h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">作业控制                                作业监测
+qsub：提交作业                         qstat：显示作业
+qdel：取消作业                         showq： 查看所有作业
+qsig：给作业发送信号                   pestat：各节点使用情况 pbsnodes：列出集群中所有节点的状态和属性
+qhold：挂起作业                        
+qrls：释放挂起的作业
+qrerun：重新运行作业
+qmove：将作业移动到另一个队列
+qalter： 更改作业资源属性
+
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="centerpbs命令大全center"><!-- raw HTML omitted -->PBS命令大全<!-- raw HTML omitted --></h3>
+<p>1、qalter 更改作业属性
+语法：qalter [-a date_time] [-A account_string] [-e path] [-h hold_list] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-M user_list] [-N name] [-o path] [-p priority] [-r c] [-u user_list] job_identifier&hellip;</p>
+<p>举例：1. 更改批处理作业的运行时间属性。</p>
+<pre><code>       $ qalter -a 0309251000 23.console
+
+   2. 更改给用户发送邮件的时间为作业中止和运行结束时
+    $ qalter –m ae 23.console
+3、修改等待状态的任务的资源情况
+qalter -l nodes=1:ppu=22 1309374.admin
+</code></pre>
+<p>2、删除作业qdel</p>
+<pre><code>   语法：qdel [-W delay|force] job_identifier ...
+
+   参数：-W 当指定delay 时，表示在删除作业前需要等待的时间（秒）
+</code></pre>
+<p>当指定force时，强制删除该作业。</p>
+<pre><code>   作用：删除批处理作业。按照命令行中所指定的作业ID的顺序来删除作业。
+
+   举例：$ qstat
+
+       Job id Name User TimeUse S Pool
+
+       22.console cpi zhangxq 0 Q long
+
+       $ qdel 22
+</code></pre>
+<p>1、后台提交作业qsub</p>
+<pre><code>   语法: qsub [-a date_time] [-A account_string] [-e path] [-h] [-I] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-n Node_allocation_Method [-L v1,[v2,[v3,[v4]]]]] [-M user_list] [-N name] [-o path] [-p priority] [-q pool] [-r y|n] [-u user_list] [-v variable_list] [-V] [script]
+
+    参数: script参数被省略时，该命令可以从标准输入获得脚本文件名。
+
+   -a 间。格式为[[[[CC]YY]MM]DD]hhmm[.SS]。CC表示世纪，YY表示年（后两位数字），MM表示月（两位数字），DD表示天（两位数 字），hh表示小时（两位数字），mm表示分（两位数字），SS表示秒（两位数字）。如果DD指定的是未来日子，而未指定MM，则MM缺省值为当前月，否 则，MM的缺省值为下个月。如果hhmm指定的未来时间，而未指定DD,则DD的缺省值为当天，否则，DD的缺省值为明天。如果提交作业时使用该选项，当 指定时间还没到时，作业状态显示为”W”。
+
+   -e 指定错误输出文件名，格式为[hostname:]path_home。Hostname是返回错误输出文件的主机名，path_home是错误输出文件 的绝对路径，如果指定了相对路径，则相对用户的主目录。不使用该选项时，缺省值是在用户主目录下，以“作业名.e作业ID”命名的文件
+
+   -o 指定输出文件名，格式为[hostname:]path_home。缺省值是在用户主目录下，以“作业名.e作业ID”命名的文件
+
+   -h 指定在提交作业时，设置用户级’u’挂起。如果不指定，则设置挂起类型为’n’,即不挂起。
+
+   -I 指定作业以交互方式运行。
+
+   -j 指定合并错误输出和实际输出。如果指定’oe’，则合并到标准输出文件中；如果指定’eo’，则合并到标准错误输出文件中.
+
+   -k 指定执行主机是否保留错误输出和实际输出。如果指定‘o’,则仅保留标准输出；如果指定’e’，则仅保留标准错误输出；如果指定’oe’或‘eo’,则保留标准输出和标准错误输出；如果指定’n’,则不保留任何输出。
+
+   -l 指定作业所需要的资源，设定对可消耗资源的限制。如果不设置，则无限制。例如： resource_name[=[value]][,resource_name[=[value]],…]
+
+   LINUX系统可以设置的资源有cput, file, pcput, pmem, pvmem, vmem, walltime, arch, nodes, ncpus等；
+
+   Cput指作业的所有进程使用cpu最长时间；
+
+   File指作业可以建立单个文件大小的最大限制；
+
+   Pcput指作业的单个进程可以使用CPU的最长时间；
+
+   vmem指作业可以使用的物理内存的最大值；
+
+   Pmem指作业的单个进程可以使用的物理内存的最大值；
+
+   Pvmem指作业的单个进程可以使用的虚拟内存的最大值；
+
+   walltime指作业处于运行状态的最长时间；
+
+   arch 指定系统管理员所定义的系统结构类型；
+
+   host指定作业运行的主机名；
+
+   nodes指定作业独占使用的结点数目和属性，使用“+”可以连接多种结点的定义。
+
+   结点的属性和主机名或数目之间通过“：”分隔。如果不指定结点数，则缺省为1。结点的属性包括ppn（每个结点上的进程数,缺省为1）和系统管理员设置的属性（如batch、bigmem）
+
+   例如：请求12个结点，不管其属性
+
+       -l nodes=12
+
+   请求12个属性为batch的结点和14个属性为bigmem的结点
+
+       -l nodes=12:batch+14:bigmem
+
+   请求4个结点，每个结点上使用2个CPU
+
+       -l nodes=4:ppn=2
+
+   software 指作业要求的软件包
+
+   -m 定义何时给用户发送有关作业的邮件。可设定的选项有：
+
+       n 不发送邮件
+
+       a 当作业被批处理系统中断时，发送邮件
+
+        b 当作业开始执行时，发送邮件
+
+       e 当作业执行结束时，发送邮件
+
+   -M 指定发送有关作业信息的邮件用户列表。格式为user[@host][,user@[host],…]缺省值为提交作业的用户。
+
+   -N 指定作业的名字。缺省值为脚本的名字，如果没有指定脚本，则为STDIN。
+
+   -p 指定作业的优先级，优先级的范围是[-1024, +1023]。缺省值是没有优先级。
+
+   -q 指定作业的目的地(结点池)，目的地可有三种格式：
+
+          pool
+
+          @server
+
+          pool@server
+
+   -r y|n 指定作业是否可重新运行。指定‘y’时，作业可以重新运行；指定’n’时，作业不能重新运行。缺省值为’n’。
+
+   -v 格式为variable1,variable2,…或variable1=value,variable2=value,…这些变量和其值可以传递到作业中。
+
+   -V 指定qsub命令的所有的环境变量都传递到批处理作业中。
+
+       作用: 以脚本文件的形式向批处理服务器提交作业。
+
+       举例:
+
+       运行MPI程序的脚本cpi.ljrs如下：
+
+       #!/bin/sh
+
+       ### Job name
+
+       #LJRS -N test
+
+       ### Declare job non-rerunable
+
+       #LJRS -r n
+
+       ### Output files
+
+       #LJRS -e test.err
+
+       #LJRS -o test.log
+
+       ### Mail to user
+
+       #LJRS -m ae
+
+       ### pool name (small, medium, long, verylong)
+
+       #LJRS -q dque
+
+       ### Number of nodes (node property ev67 wanted)
+
+       #LJRS -l nodes=8:batch
+
+       # This job’s working directory
+
+       echo Working directory is $LJRS_O_WORKDIR
+
+       cd $LJRS_O_WORKDIR
+
+       echo Running on host ‘hostname‘
+
+       echo Time is ‘date‘
+
+       echo Directory is ‘pwd‘
+
+       echo This jobs runs on the following processors:
+
+       echo ‘cat $LJRS_NODEFILE‘
+
+       # Define number of processors
+
+       NPROCS=‘wc -l &lt; $LJRS_NODEFILE‘
+
+       echo This job has allocated $NPROCS nodes
+
+       # Run the parallel MPI executable “a.out”
+
+       mpirun -v -machinefile $LJRS_NODEFILE -np $NPROCS cpi
+
+      
+
+       1、把脚本文件cpi.ljrs提交到结点池dque中运行。
+
+          $ qsub cpi.ljrs
+
+          35.console
+
+          $ qstat
+
+          Job id Name User TimeUse S Pool
+
+          35.console cpi zhangxq 0:00:00 R dque
+
+       2、把脚本作业cpi.ljrs提交到结点池long中运行，并且当作业开始运行时，给用户发送电子邮件。
+
+          $qsub -P long -m b cpi.ljrs $qstat
+
+          Job id Name User TimeUse S Pool
+
+          36.console cpi zhangxq 0 R long
+
+       3、使用15个结点运行cpi.ljrs，运行时间不能大于2小时，作业占用的内存能大于15mb
+
+          $qsub –l nodes=15,walltime=2:00:00,mem=15mb cpi.ljrs
+
+
+
+       4、综合考虑CPU、内存、缓冲区、硬盘等因素的使用情况，设置其权值分别为5, 4, 3, 2.
+
+          $qsub –l nodes=5 -n syn –L 5, 4, 3, 2 cpi.ljrs
+
+       5、使用-I和–l选项在指定的结点上交互式运行作业
+
+          $ qsub –I -l nodes=c0101
+
+          运行该命令后,系统将自动切换到c0101的虚拟终端,所有的标准输入和标准输出和标准错误输出均都显示在该终端上. 在系统出现”waiting to jobid to start”时,用户若按^C键,即可中断该交互作业.当该交互作业已经启动后,用户除了交互式运行作业外,还可进行以下操作:
+
+          ~. 该命令将使qsub退出，且终止作业。
+
+          ~^Z挂起qsub,作业依然保持运行状态，无任何输入输出。用户可以在本地shell上提交命令。
+
+          ~^Y部分挂起qsub，因为还可以给作业发送输入，而且接受作业的输出的同时，还可以在本地shell提交命令。
+
+
+
+2、查看状态qstat
+
+   语法：qstat [-f][-W site_specific] [job_identifier... | destination...]
+
+         qstat -Q [-f][-W site_specific] [destination...]
+
+         qstat -B [-f] [-W site_specific] [server_name...]
+
+   参数：destination可以为pool，@server，pool@server
+
+   作用：查看作业、结点池和批处理服务器的状态。命令格式一可以输出所指定作业ID或者结点池中所有作业的状态，命令格式二可以输出每个结点池的状态信息，命令格式三可以输出服务器的状态。
+
+   举例：
+
+   1. 显示已经配置的所有结点池状态信息。
+
+       qstat -q
+
+   2. 显示已经提交的作业状态信息
+
+       qstat -a
+
+   3. 显示指定作业的所有状态信息
+
+       $ qstat -f 23.console
+
+       mtime = Sun Apr 28 19:54:48 2002
+
+       Output_Path = console:/home/zhangxq/cpi.o23
+
+       Priority = 0
+
+       qtime = Sun Apr 28 19:54:48 2002
+
+       Rerunable = True
+
+       Resource_List.cput = 00:00:59
+
+       Resource_List.nodect = 2
+
+       Resource_List.nodes = 2:ppn=1
+
+       Variable_List = LJRS_O_HOME=/home/zhangxq,LJRS_O_LANG=en_US
+
+       ……
+
+   4. 显示服务器的状态
+
+       $qstat –B
+
+       Server Max Tot Que Run Hld Wat Trn Ext Status
+
+       console 0 0 0 0 0 0 0 0 Active
+
+
+
+3、查询作业qselect
+
+   语法：qselect [-a [op]date_time] [-A account_string] [-h old_list] [-l resource_list] [-N name] [-p [op]priority] [-q destination] [-r y|n] [-s states] [-u user_list]
+
+   参数：op表示某一个作业属性值和选项参数值之间的关系。如
+
+   .eq. （等于）
+
+   .ne. （不等于）
+
+   .ge. （大于或等于）
+
+   .gt. （大于）
+
+   .le. （小于）
+
+   其它参数含义见qsub命令。
+
+   作用：列出符合选项要求的作业ID。这些作业来自于单个服务器。如果没有任何选项，该命令则列出该用户被授权的服务器上的所有作业。对那些普通用户来说，该命令只显示该用户所提交的作业。
+
+   举例：
+
+   1. 查询用户所提交的作业
+
+       $ qsub -q long cpi.ljrs
+
+       28.console
+
+       $ qselect
+
+       25.console
+
+       28.console
+
+   2. 查询指定结点池中的作业
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       25.console cpi zhangxq 0 Q dque
+
+       29.console cpi zhangxq 0 R long
+
+       $ qselect -P dque
+
+       25.console
+
+   3. 查询指定主机上的作业
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       25.console cpi zhangxq 0 Q dque
+
+       29.console cpi zhangxq 0 R long
+
+       $ qselect -P @console
+
+       25.console
+
+       29.console
+
+
+
+4、挂起作业qhold
+
+    语法：qhold [-h hold_list] job_identifier …
+
+    作用：挂起批处理作业。挂起有三种类型：普通用户级‘u’、管理员级（操作员级）‘o’、系统级‘s’，缺省值为不挂起‘n’。用户只能在用户级别挂起自己提交的作业，操作员可以在用户级和操作员级挂起任何作业，系统管理员可以在任何级别上挂起任何作业。
+
+    在执行该命令时，如果作业在运行结点池里排队，那么作业将直接被挂起；如果作业处于运行状态，为了中断作业的执行，必须采取其他办法。如果被挂起作业的主 机系统支持一致点检查或者重新启动，则挂起正在运行作业将引发以下操作：首先检查作业的一致性，然后释放该作业所占用的资源，最后该作业位于执行结点池 中，处于挂起状态；如果被挂起作业的主机系统不支持一致点检查或者重新启动，则仅设置指定的挂起作业类型，而实际上并不能挂起，除非调用qrerun命令 重新运行该作业时，该挂起请求才生效。
+
+    举例：
+
+    1. 使用普通用户身份挂起作业
+
+       $ qhold -h u 25.console $ qstat
+
+       Job id Name User TimeUse S Pool
+
+        25.console cpi zhangxq 0 H dque
+
+    2. 以操作员身份挂起作业
+
+        $ qhold -h o 25
+
+       qhold: Unauthorized Request 25.console
+
+       $ su root
+
+        $ qhold -h o 25
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+        25.console cpi zhangxq 0 H dque
+
+
+
+5、释放作业qrls
+
+    语法：qrls [-h hold_list] job_identifier ...
+
+    作用：释放被挂起的批处理作业。由于作业的挂起有三种类型：USER、OPERATOR和SYSTEM。所以，要释放不同类型的作业挂起，用户就必须具有相应的权限。缺省为USER级
+
+    举例：释放在普通用户和操作员级被挂起的作业。
+
+        $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       25.console cpi zhangxq 0 H dque
+
+        $ qrls -h uo 25
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+        25.console cpi zhangxq 0 Q dque
+
+
+
+6、重新运行作业qrerun
+
+   语法：qrerun job_identifier ...
+
+   作用：重新运行所指定的作业。
+
+   举例：如果作业允许别重新执行（缺省值是可以重新运行）。ROOT用户运行该命令，可以终止本次运行，把该作业放入其原来所在的结点池中，重新运行。
+
+       $ qrerun 27
+
+       qrerun: Unauthorized Request 27.console
+
+       $ su – root
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       25.console cpi zhangxq 0 Q dque
+
+       27.console cpi zhangxq 0 R dque
+
+       $ qrerun 27
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       25.console cpi zhangxq 0 Q dque
+
+       27.console cpi zhangxq 0 R dque
+
+
+
+7、更改作业属性qalter
+
+   语法：qalter [-a date_time] [-A account_string] [-e path] [-h hold_list] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-M user_list] [-N name] [-o path] [-p priority] [-r c] [-u user_list] job_identifier...
+
+   参数：各参数的含义见qsub命令。
+
+   作用：更改批处理作业的属性。主要修改所指定作业ID的相关属性（选项表中所列出的属性）。
+
+   举例：1. 更改批处理作业的运行时间属性。
+
+       $ qalter -a 0309251000 23.console
+
+   2. 更改给用户发送邮件的时间为作业中止和运行结束时
+
+       $ qalter –m ae 23.console
+
+
+
+8、删除作业qdel
+
+   语法：qdel [-W delay|force] job_identifier ...
+
+   参数：-W 当指定delay 时，表示在删除作业前需要等待的时间（秒）
+</code></pre>
+<p>当指定force时，强制删除该作业。</p>
+<pre><code>   作用：删除批处理作业。按照命令行中所指定的作业ID的顺序来删除作业。
+
+   举例：$ qstat
+
+       Job id Name User TimeUse S Pool
+
+       22.console cpi zhangxq 0 Q long
+
+       $ qdel 22
+
+
+
+9、给作业发送消息qmsg
+
+   语法：qmsg [-E] [-O] message_string job_identifier ...
+
+   参数：-E 将消息串写入错误输出文件
+
+         -O将消息串写入输出文件
+
+   作用：给批处理作业发送消息。该命令通过给作业的所有者（批处理服务器）发送消息，从而把消息写入作业的输出文件，也就是说，该命令并不是直接把消息写入作业的输出文件。
+
+   举例：给正在运行的作业发送消息，该消息被写入所指定作业的错误输出文件中。
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       25.console cpi zhangxq 0 Q dque
+
+       26.console cpi zhangxq 0 R dque
+
+       $ qmsg “The job is running” 26
+
+       $ more cpi.e26
+
+       The job is running
+
+
+
+10、在结点池之间移动作业qmove
+
+   语法：qmove destination job_identifier ...
+
+   参数：destination可以为结点池名
+
+   作用：把批处理作业移到其他结点池中去运行。即把作业从所在的结点池中删除，并放在其他结点池中。
+
+   举例：
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       22.console cpi zhangxq 0 Q dque
+
+       $ qmove long 22
+
+       $ qstat
+
+       Job id Name User TimeUse S Pool
+
+       22.console cpi zhangxq 0 Q long
+
+
+
+11、给作业发送信号qsig
+
+   语法：qsig [-s signal] job_identifier ...
+
+   参数：参数signal可以为信号名称，如SIGKILL,KILL,SIGNULL或者无符号整数，如9、0。
+
+   作用：给正在运行的批处理作业发送信号。如果不指定-S选项，则发送“SIGTERM”信号。如果有下列原因之一，如用户无权给作业发送信号、作业未处于运行状态和该信号请求对作业所运行的系统无效，则拒绝执行该命令请求。
+
+
+
+12、查看和管理结点ljrsnodes
+
+   语法：ljrsnodes [- {c|o|r}] [nodename …] ljrsnodes - {a|l }]
+
+   参数：-a 列出所有结点及其属性，属性包括“state”和“properties”
+
+   -c 清除结点列表中的“offline”或“down”状态设置，使结点可以被分配给作业。
+
+   -l 以行的方式列出被标记的结点的状态 -o 将指定结点的状态标记为“offline”。这将帮助管理员暂时停止某些结点的服务。
+
+   -r 清除指定结点的“offline”状态
+
+   作用：该命令可以标记结点的状态为“offline”、“down”或“free”,也可以帮助用户查看结点信息。除了”-a” 和“-l”选项外，使用其他选项需要拥有操作员和管理员权限。
+
+   举例：1、查看所有结点信息
+
+       ljrsnodes -a
+
+   2、将结点标记为“offline”状态
+
+       ljrsnodes –o c0108
+
+   3、清除结点的“offline”状态设置
+
+       ljrsnodes –c c0108 或 ljrsnodes –r c0108
+
+
+
+13、查看所有计算结点的状态shownodes
+
+   语法：shownodes [-h]
+
+   作用：按照结点池分类显示各结点池中结点的状态，结点状态以不同颜色显示。并在结点名后以数字代表可用CPU数和总共CPU数。例如c0101-2/2, 表示c0101结点可用2CPU总共2CPU，c0102-1/2表示C0102可用1CPU总共2CPU。
+
+   举例：$shownodes –h
+</code></pre>
+<p>用户通过qsub命令来向系统提交任务，有两种方式提交：脚本方式和命令行方式。（一般情况下，不允许root用户使用qsub命令提交作业）。下面先讲一下用这两种方式提交作业的过程。
+脚本方式提交</p>
+<p>用户将需要执行的程序或命令写入脚本中，再加入一些必要或者可选的语句，就可以通脚本方式提交。脚本提交比较方便，用户可以用最简单的文字编辑器（例如 vi）编写一个脚本，然后使用 qsub 命令提交该脚本，pbs 会按照脚本内容执行相应的任务。脚本提交的不足之处就是需要用户执行任务前编写脚本。
+脚本方式提交任务的一般格式为：qsub [script_name]，script_name 是任务脚本的名称。
+下面介绍 pbs 任务脚本的编写方法。
+pbs 任务脚本包括三部分：</p>
+<pre><code>* shell 说明语句：用来说明用户使用的是哪种 shell，例如 #!/bin/sh说明用户需要使用 Bourne shell，如果用户没有指定，则默认为 Bourne shell
+* pbs 指示语句：pbs 指示语句是用户用来请求任务运行时所需的资源或设置任务的一些属性的。以#PBS开头，如#PBS –N taskname 是用来设置任务名称的。pbs 指示语句是可选的，用户可以不用关心它如何写，系统会自动设置。
+* pbs 指示句的一个主要作用是请求任务执行时所需要的系统资源，如 cpu 数目，存储容量，运行时间，运行优先级等等。以脚本方式提交的任务的资源请求是通过 pbs 指示语句，一般格式为 #PBS –l [选项=] [选项对应的值]，如#PBS –l ncpus=5 表示请求 5 个cpu为之服务。系统资源如下所示
+</code></pre>
+<p>arch 所需要的系统结构，只用在资源块中 -l arch=linux
+cput 任务的所有进程拥有的最大 cpu 执行时间 -l cput=1:00:00
+file 任务能够创建的文件的大小 -l file=45mb
+host 指定执行主机的名称 -l nodes=X:host 分配 X个主机名称 中含有 host的执行节点
+mem 任务的所有进程能够分配到的最大物理内存数 -l mem=100mb
+ncpus 请求的 cpu数 -l ncup=5
+nice 任务运行时的 nice 优先级值 -l nice=3
+pcput 任务的任何一个进程拥有的最大 cpu 执行时间 -l pcput=1:00:00
+pmem 任务的任何一个进程能够分配到的最大物理内存数 -l pmem=45mb
+pvmem 任务的任何一个进程能够使用的虚拟内存的最大数 -l pvmem=100mb
+vmem 任务的所有并发进程能够使用的最大虚存数 -l pvmem=100mb
+walltime 任务可以处于运行态的最大 wall-clock 时间 -l walltime=1:00:00
+custom resources 用户自定义资源</p>
+<p>最常用的几种资源是：walltime, ncpus, mem, host。其它可以不用太关心。</p>
+<p>资源请求的两种方式：</p>
+<p>a、资源块方式：资源块是将任务所需的资源作为一个整体，这个整体中说明了所需要的各种资源的数目。其格式为：-l select=[N:]chunk[+[N:]chunk…]，如qsub –l select=2:ncpus=3:mem=4gb:arch=linux ，select=2表示需要2个这样的资源块，一个资源块包括3个cpu，4gb的内存，系统结构要求是linux，即总共需要6个cpu，8gb的内存。再如：-l select=2:ncpus=1:mem=10GB+3:ncpus=2:mem=8GB:arch=solaris注意中间的+号，是两个资源块的分隔符
+b、请求全任务(job-wide)资源：格式为 –l  keyword=value[,keyword=value &hellip;]如：qsub -l ncpus=4,mem=123mb,arch=linux</p>
+<p>任务（程序或命令）：可以是用户程序（如C程序），也可以是系统命令
+下面是一个完整的任务脚本例子，脚本名为 mytask：</p>
+<pre><code>   1. #!/bin/sh                 //指明所用的 shell
+   2. #PBS –N mytask     //设置任务名称
+   3. #PBS -l walltime=1:00:00       //请求任务执行时间
+   4. #PBS -l select=ncpus=4:mem=400mb    //请求任务执行所需资源
+   5. #PBS -j oe                       //设置相关属性(文件合并)
+   6. date /t                           //系统命令（打印日期时间）
+   7. .\my_application                 //所要执行的任务(当前目录名为 my_application的任务)
+   8. date /t       //  系统命令
+</code></pre>
+<p>第 1 行说明所用的 shell；第 2 至5 行是 pbs 指示语句，设置了任务的一些属性，并请求了资源；第 6 至8行是要执行的命令及任务。
+编写完脚本后，使用 qsub 命令提交脚本，在 shell下输入：</p>
+<pre><code>qsub mytask
+</code></pre>
+<p>后敲回车。
+系统会输出一个任务标识符：sequence-number.servername，如 220.cnode01。sequence-number是任务编号，后面需要用这个号查看任务的执行状态，ervername
+是 pbs server的名称。</p>
+<p>命令行方式提交
+命令行方式提交不用写脚本，用户可以直接从命令行输入。输入的内容基本上和在脚本中输入的相同。其基本格式如下：
+qsub <!-- raw HTML omitted -->         //输入qsub命令后回车
+[directives]     //pbs指示语句（以#PBS为前缀）
+[tasks]       //任务或命令
+ctrl-D        //结束输入，提交任务
+对于上面用脚本方式提交的任务，用命令行方式提交的格式如下：</p>
+<pre><code>   1. qsub
+   2. #PBS –N mytask
+   3. #PBS –l walltime=1:00:00
+   4. #PBS –l select=ncpus=4:mem=400mb
+   5. #PBS -j oe
+   6. date /t
+   7. ./my_application
+   8. date /t
+</code></pre>
+<p>注：以命令行方式提交任务时，这些命令选项都要以 pbs 指示语句的格式给出，即选项之前要加前缀#PBS。
+任务提交后，用户如果要知道任务的当前运行状态，可以通过 qstat 命令查询。qstat 命令的常用选项有：
+无选项：当 qstat 命令不带任何选项时，以默认方式显示任务信息，例如</p>
+<pre><code>[soofree@node32]$ qstat
+Job id           Name             User        Time Use   S               Queue
+—————-   —————-      —————-    ————   ——
+569.node32    test             soofree          0             R               small
+</code></pre>
+<p>其中，Job id 是任务的标识符，Name 是任务名称，User是任务所有者，Time Use 是CPU使用时间，S 是任务当前状态（本例中 R表示正在运行），Queue表示任务所在队列。任务的状态如下：</p>
+<pre><code>    * B  只用于任务向量，表示任务向量已经开始执行
+    * E  任务在运行后退出
+    * H  任务被服务器或用户或者管理员阻塞
+    * Q  任务正在排队中，等待被调度运行
+    * R  任务正在运行
+    * S  任务被服务器挂起，由于一个更高优先级的任务需要当前任务的资源
+    * T  任务被转移到其它执行节点了
+    * U  由于服务器繁忙，任务被挂起
+    * W  任务在等待它所请求的执行时间的到来(qsub -a)
+    * X  只用于子任务，表示子任务完成
+</code></pre>
+<p>再举一例，使用-a 选项指定任务开始执行时间：</p>
+<pre><code>[soofree@nod32]$ qsub -a 2102 test
+571.node32
+[soofree@node32]$ qstat
+
+Job id           Name     User    Time Use S  Queue
+—————- —————- —————- ———– — ——–
+570.cnode01      test       soofree     0    W    default
+</code></pre>
+<p>此时任务状态(S)显示 W，表示任务正在等待执行时间的到来</p>
+<p>PBS 命令与使用</p>
+<p>PBS(Portable Batch System)是由NASA开发的灵活的批处理系统。它被用于集群系统、超级计算机和大规模并行系统。PBS主要有如下特征：
+易用性：为所有的资源提供统一的接口，易于配置以满足不同系统的需求，灵活的作业调度器允许不同系统采用自己的调度策略。
+移植性：符合POSIX 1003.2标准，可以用于shell和批处理等各种环境。
+适配性：可以适配与各种管理策略，并提供可扩展的认证和安全模型。支持广域网上的负载的动态分发和建立在多个物理位置不同的实体上的虚拟组织。
+灵活性：支持交互和批处理作业。
+OpenPBS( <a href="http://www.OpenPBS.org/">http://www.OpenPBS.org/</a>)是PBS的Open Source的实现。商业版本的PBS可以参照： <a href="http://www.pbspro.com/">http://www.pbspro.com/</a>。
+1、PBS命令
+PBS提供4条命令用于作业管理。
+(1)     qsub 命令—用于提交作业脚本
+命令格式：
+qsub  [-a date_time] [-c interval] [-C directive_prefix]
+[-e path] [-I] [-j join] [-k keep] [-l resource_list]  [-m mail_options]
+[-M user_list][-N name] [-o path] [-p priority] [-q destination] [-r c]
+[-S path_list] [-u user_list][-v variable_list] [-V]
+[-W additional_attributes] [-z]
+[script]
+参数说明：因为所采用的选项一般放在pbs脚本中提交，所以具体见PBS脚本选项。
+例：# qsub  aaa.pbs         提交某作业，系统将产生一个作业号
+(2)     qstat 命令—用于查询作业状态信息
+命令格式：qatat [-f][-a][-i] [-n][-s] [-R] [-Q][-q][-B][-u]
+参数说明：
+-f  jobid  列出指定作业的信息
+-a        列出系统所有作业
+-i         列出不在运行的作业
+-n        列出分配给此作业的结点
+-s        列出队列管理员与scheduler所提供的建议
+-R       列出磁盘预留信息
+-Q       操作符是destination id，指明请求的是队列状态  <br>
+-q        列出队列状态，并以alternative形式显示
+-au userid  列出指定用户的所有作业
+-B       列出PBS Server信息
+-r        列出所有正在运行的作业
+-Qf queue 列出指定队列的信息
+-u        若操作符为作业号，则列出其状态。
+若操作符为destination id，则列出运行在其上的属于user_list中用户的作业状态。
+例：# qstat -f 211      查询作业号为211的作业的具体信息。
+(3) qdel 命令—用于删除已提交的作业
+命令格式：qdel  [-W 间隔时间] 作业号
+命令行参数：
+例：# qdel -W 15 211            15秒后删除作业号为211的作业
+(4)     qmgr 命令—用于队列管理
+qmgr -c &ldquo;create queue batch queue_type=execution&rdquo;
+qmgr -c &ldquo;set queue batch started=true&rdquo;
+qmgr -c &ldquo;set queue batch enabled=true&rdquo;
+qmgr -c &ldquo;set queue batch resources_default.nodes=1&rdquo;
+qmgr -c &ldquo;set queue batch resources_default.walltime=3600&rdquo;
+qmgr -c &ldquo;set server default_queue=batch&rdquo;
+2、PBS脚本文件
+PBS脚本文件由脚本选项和运行脚本两部分组成。
+(1) PBS作业脚本选项 （若无-C选项，则每项前面加‘#PBS’）
+-a  date_time ： date_time格式为：[[[[CC]YY]MM]DD]hhmm[.SS]
+表示经过date_time时间后作业才可以运行。
+-c  interval   ： 定义作业的检查点间隔，如果机器不支持检查点，则忽略此选项。
+-C  directive_prefix ：在脚本文件中以directive_prefix开头的行解释为qsub的命
+令选项。（若无此选项，则默认为’#PBS’ ）
+-e  path     ：将标准错误信息重定向到path
+-I           ：以交互方式运行
+-j  join      ：将标准输出信息与标准错误信息合并到一个文件join中去。
+-k  keep     ：定义在执行结点上保留标准输出和标准错误信息中的哪个文件。
+keep为o 表示保留前者，e表示后者，oe或eo表示二者都保留，
+n表示皆不保留。若忽略此选项，二者都不保留。
+-l  resource_list  ： 定义资源列表。以下为几个常用的资源种类。
+cput=N            ： 请求N秒的CPU时间; N也可以是hh:mm:ss的形式。
+mem=N[K|M|G][B|W]：请求N {kilo|mega|giga}{bytes|words} 大小的内存。
+nodes=N:ppn=M     ：请求N个结点，每个结点M个处理器。
+-m  mail_options ：mail_option为a：作业abort时给用户发信；为b：作业开始运行发信；为e：作业结束运行时发信。若无此选项，默认为a。
+-M  user_list   ： 定义有关此作业的mail发给哪些用户。
+-N  name      ： 作业名，限15个字符，首字符为字母，无空格。
+-o  path       ： 重定向标准输出到path。
+-p  priority     ： 任务优先级，整数，[-1024，1023]，若无定义则为0.
+-q  destination  ： destination有三种形式： queue , @server,queue@server。
+-r  y|n         ： 指明作业是否可运行，y为可运行，n为不可运行。
+-S  shell       ： 指明执行运行脚本所用的shell，须包含全路径。
+-u  user_list    ： 定义作业将在运行结点上以哪个用户名来运行。
+-v  variable_list ： 定义export到本作业的环境变量的扩展列表。
+-V             ： 表明qsub命令的所有环境变量都export到此作业。
+-W  additional_attributes  ： 作业的其它属性。
+-z             ： 指明qsub命令提交作业后，不在终端显示作业号。
+(2)     运行脚本同LINUX下一般的运行脚本文件。
+[注]：脚本文件中的mpirun_rsh命令行中的节点列表文件要用环境变量表示
+$PBS_NODEFILE，这个环境变量表示由pbs自动分配给作业的节点列表；
+节点数为命令行中指定的进程数。
+格式如下：
+mpirun_rsh –np 进程数 –hostfile $PBS_NODEFILE 可执行程序名</p>
+<p>命令详解如下：</p>
+<p>Getting Status on the System, Queues, and Jobs
+Command	Short Description	Tutorial	Manual Page
+qstat	list information about queues and jobs	Using qstat	qstat man page
+qstat -q	list all queues on system	HTML and PS	qstat man page
+qstat -Q	list queue limits for all queues	HTML and PS	qstat man page
+qstat -a	list all jobs on system	Using qstat	qstat man page
+qstat -au userid	list all jobs owned by user userid	Using qstat	qstat man page
+qstat -s	list all jobs with status comments	HTML and PS	qstat man page
+qstat -r	list all running jobs	HTML and PS	qstat man page
+qstat -f jobid	list all information known about specified job	Using qstat	qstat man page
+qstat -Qf queue	list all information known about specified queue	Using qstat	qstat man page
+qstat -B	List summary information about the PBS server	HTML and PS	qstat man page
+Submitting a Job
+qsub jobscript	submit jobscript to PBS	Using qsub	qsub man page
+qsub -I	submit an interactive-batch job	Using qsub	qsub man page
+qsub -q queue	submit job directly to a specified queue	Using qsub	qsub man page
+Using the Graphical User Interface (GUI)
+xpbs	Graphical User Interface to PBS commands	Using xpbs	xpbs man page</p>
+
+        </div>
+        <div class ='post_extra mb-2'>
+          <div class = 'copy'></div>
+
+        </div>
+        <div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href = 'https://netwchao.github.io/' class = 'post_nav'><span class = 'post_next'>The Latest</span>T</a>
+
+    </main>
+    <footer class = 'footer wrap pale'>
+  <p>&copy;&nbsp;<span class = 'year'></span>&nbsp;Wlecome to Wang Chao&#39;s blog</p>
+  <p>Designed by  <a href = 'https://www.linkedin.com/in/dan-weru-profile/' target = '_blank' title = 'Linkedin Profile' rel = 'nonopener'>Weru</a></p>
+</footer>
+
+
+<script src = 'https://netwchao.github.io/js/index.min.8aecb45303cba13ff3505b0722963b9a9d1d65fb1093581f956b5e5a5337a5ed015349a5d910b0c1bf9028e74ce18ae1c98e148503767b4c3e38cfb7242c312b.js'></script>
+
+  </body>
+</html>

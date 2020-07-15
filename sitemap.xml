@@ -53,12 +53,12 @@
   </url>
   
   <url>
-    <loc>https://netwchao.github.io/post/creating-a-new-theme/</loc>
+    <loc>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://netwchao.github.io/post/emoji-support/</loc>
+    <loc>https://netwchao.github.io/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</loc>
     <lastmod>2020-07-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -75,31 +75,6 @@
   <url>
     <loc>https://netwchao.github.io/</loc>
     <lastmod>2019-08-25T00:52:59+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/post/goisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/post/hugoisforlovers/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/tags/templates/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/tags/themes/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/post/migrate-from-jekyll/</loc>
-    <lastmod>2014-03-10T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
