@@ -8,17 +8,17 @@
   </url>
   
   <url>
+    <loc>https://netwchao.github.io/tags/bioinformatics/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://netwchao.github.io/categories/bioinformatics/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://netwchao.github.io/categories/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/tags/go/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/tags/golang/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -28,7 +28,12 @@
   </url>
   
   <url>
-    <loc>https://netwchao.github.io/tags/hugo/</loc>
+    <loc>https://netwchao.github.io/tags/life/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://netwchao.github.io/tags/literary/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -38,22 +43,22 @@
   </url>
   
   <url>
+    <loc>https://netwchao.github.io/tags/skills/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://netwchao.github.io/tags/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
+    <loc>https://netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/tags/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/</loc>
-    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/categories/%E7%94%9F%E7%89%A9%E4%BF%A1%E6%81%AF%E5%AD%A6/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
