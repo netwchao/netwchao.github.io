@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "main.css",
-	"sourceRoot": "D:/yuanD/blog/wangchao",
+	"sourceRoot": "D:/yuanD/BLOG/wangchao",
 	"sources": [
 		"themes/newsroom/assets/scss/main.scss",
 		"themes/newsroom/assets/scss/_fonts.scss",
