@@ -30,14 +30,25 @@
     </item>
     
     <item>
+      <title>文献阅读1</title>
+      <link>https://netwchao.github.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</guid>
+      <description>整合小鼠和人类遗传数据可鉴定胆固醇代谢中的致病基因(Cell Metabolism)  Genome-Wide Mouse Liver Co-expression Network Analysis  These data are collected from more than 900 unique mice and are composed of 12 distinct datasets based on sex, dietary intervention, and molecular trait In 11 of 12 datasets, we were able to identify a module of genes significantly enriched for the Gene Ontology (GO) term, cholesterol biosynthetic process With the 2,435unique genes, we identified genes that were replicated acrosscholesterol modules in more than three datasets at the transcript level, more than two datasets at the protein level, or present in both transcript and protein datasets.</description>
+    </item>
+    
+    <item>
       <title>服务器集群使用方法</title>
       <link>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
-      <description>集群使用方法 1 2 3 4 5 6 7 8 9 10  作业控制 作业监测 qsub：提交作业 qstat：显示作业 qdel：取消作业 showq： 查看所有作业 qsig：给作业发送信号 pestat：各节点使用情况 pbsnodes：列出集群中所有节点的状态和属性 qhold：挂起作业 qrls：释放挂起的作业 qrerun：重新运行作业 qmove：将作业移动到另一个队列 qalter： 更改作业资源属性   PBS命令大全 1、qalter 更改作业属性 语法：qalter [-a date_time] [-A account_string] [-e path] [-h hold_list] [-j join] [-k keep] [-l resource_list] [-m mail_options] [-M user_list] [-N name] [-o path] [-p priority] [-r c] [-u user_list] job_identifier&amp;hellip;
-举例：1. 更改批处理作业的运行时间属性。
- $ qalter -a 0309251000 23.</description>
+      <description>eQTL的概念 表达数量性状基因座（expression Quantitative Trait Loci,eQTL）是对上述概念的进一步深化，它指的是染色体上一些能特定调控mRNA和蛋白质表达水平的区域，其mRNA/蛋白质的表达水平量与数量性状成比例关系。eQTL可分为顺式作用eQTL和反式作用eQTL，顺式作用eQTL就是某个基因的eQTL定位到该基因所在的基因组区域，表明可能是该基因本身的差别引起的mRNA水平变化；反式作用eQTL是指某个基因的eQTL定位到其他基因组区域，表明其他基因的差别控制该基因mRNA水平的差异。
+eQTL就是把基因表达作为一种性状,研究遗传突变与基因表达的相关性: 就好像研究遗传突变与身高的相关性一样
+早年可以通过同时做一个个体的SNP芯片和cDNA芯片, 在全基因组尺度研究突变与表达的相关性, 这种研究需要较多个体(例如1000个); 现在随着深度测序的出现,很多人开始用RNA-Seq在较少量个体中研究allele-specific expression,本质上就是eQTL.
+作者：又是一只小菜鸟（https://www.jianshu.com/p/2e1e9d3ccd63）
+###数据库### *</description>
     </item>
     
     <item>

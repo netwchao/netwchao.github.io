@@ -29,5 +29,14 @@
       <description>关于测序数据质控  学习资料收集   1.3质控结果解读   质控软件fastqc官网FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis. The main functions of FastQC are：</description>
     </item>
     
+    <item>
+      <title>文献阅读1</title>
+      <link>https://netwchao.github.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</guid>
+      <description>整合小鼠和人类遗传数据可鉴定胆固醇代谢中的致病基因(Cell Metabolism)  Genome-Wide Mouse Liver Co-expression Network Analysis  These data are collected from more than 900 unique mice and are composed of 12 distinct datasets based on sex, dietary intervention, and molecular trait In 11 of 12 datasets, we were able to identify a module of genes significantly enriched for the Gene Ontology (GO) term, cholesterol biosynthetic process With the 2,435unique genes, we identified genes that were replicated acrosscholesterol modules in more than three datasets at the transcript level, more than two datasets at the protein level, or present in both transcript and protein datasets.</description>
+    </item>
+    
   </channel>
 </rss>
