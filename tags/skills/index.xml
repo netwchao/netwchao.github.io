@@ -30,6 +30,24 @@
     </item>
     
     <item>
+      <title>Fine mapping</title>
+      <link>https://netwchao.github.io/post/fine-mapping/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/fine-mapping/</guid>
+      <description>Fine mapping  精细定位 【生物大数据】统计方法在生物信息学“精细定位”（fine-mapping）中的应用
+GWAS研究基本概念2——Fine mapping
+[Strategies for fine-mapping complex traits]https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4572002/
+ 基因型填充 基因型填充(Genotype-Imputation)：从原理到操作
+基因型填充是怎么回事？
+缺失基因型填充
+GWAS: 网页版的基因型填充（genotypeimputation）
+最大参考序列集助力基因型推断
+测序 WGS学习笔记
+缺失基因型填充</description>
+    </item>
+    
+    <item>
       <title>关于测序数据质控</title>
       <link>https://netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>

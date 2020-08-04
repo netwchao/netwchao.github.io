@@ -6,10 +6,22 @@
     <description>Recent content in Posts on Wlecome to Wang Chao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2019, Weru and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://netwchao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>eQTL</title>
+      <link>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>eQTL的概念 表达数量性状基因座（expression Quantitative Trait Loci,eQTL）是对上述概念的进一步深化，它指的是染色体上一些能特定调控mRNA和蛋白质表达水平的区域，其mRNA/蛋白质的表达水平量与数量性状成比例关系。eQTL可分为顺式作用eQTL和反式作用eQTL，顺式作用eQTL就是某个基因的eQTL定位到该基因所在的基因组区域，表明可能是该基因本身的差别引起的mRNA水平变化；反式作用eQTL是指某个基因的eQTL定位到其他基因组区域，表明其他基因的差别控制该基因mRNA水平的差异。
+eQTL就是把基因表达作为一种性状,研究遗传突变与基因表达的相关性: 就好像研究遗传突变与身高的相关性一样
+早年可以通过同时做一个个体的SNP芯片和cDNA芯片, 在全基因组尺度研究突变与表达的相关性, 这种研究需要较多个体(例如1000个); 现在随着深度测序的出现,很多人开始用RNA-Seq在较少量个体中研究allele-specific expression,本质上就是eQTL.
+###数据库### *</description>
+    </item>
     
     <item>
       <title>文献阅读1</title>
@@ -30,25 +42,30 @@
     </item>
     
     <item>
+      <title>Fine mapping</title>
+      <link>https://netwchao.github.io/post/fine-mapping/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/fine-mapping/</guid>
+      <description>Fine mapping  精细定位 【生物大数据】统计方法在生物信息学“精细定位”（fine-mapping）中的应用
+GWAS研究基本概念2——Fine mapping
+[Strategies for fine-mapping complex traits]https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4572002/
+ 基因型填充 基因型填充(Genotype-Imputation)：从原理到操作
+基因型填充是怎么回事？
+缺失基因型填充
+GWAS: 网页版的基因型填充（genotypeimputation）
+最大参考序列集助力基因型推断
+测序 WGS学习笔记
+缺失基因型填充</description>
+    </item>
+    
+    <item>
       <title>关于测序数据质控</title>
       <link>https://netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
       <guid>https://netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</guid>
       <description>关于测序数据质控  学习资料收集   1.3质控结果解读   质控软件fastqc官网FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis. The main functions of FastQC are：</description>
-    </item>
-    
-    <item>
-      <title>服务器集群使用方法</title>
-      <link>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://netwchao.github.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
-      <description>eQTL的概念 表达数量性状基因座（expression Quantitative Trait Loci,eQTL）是对上述概念的进一步深化，它指的是染色体上一些能特定调控mRNA和蛋白质表达水平的区域，其mRNA/蛋白质的表达水平量与数量性状成比例关系。eQTL可分为顺式作用eQTL和反式作用eQTL，顺式作用eQTL就是某个基因的eQTL定位到该基因所在的基因组区域，表明可能是该基因本身的差别引起的mRNA水平变化；反式作用eQTL是指某个基因的eQTL定位到其他基因组区域，表明其他基因的差别控制该基因mRNA水平的差异。
-eQTL就是把基因表达作为一种性状,研究遗传突变与基因表达的相关性: 就好像研究遗传突变与身高的相关性一样
-早年可以通过同时做一个个体的SNP芯片和cDNA芯片, 在全基因组尺度研究突变与表达的相关性, 这种研究需要较多个体(例如1000个); 现在随着深度测序的出现,很多人开始用RNA-Seq在较少量个体中研究allele-specific expression,本质上就是eQTL.
-作者：又是一只小菜鸟（https://www.jianshu.com/p/2e1e9d3ccd63）
-###数据库### *</description>
     </item>
     
     <item>
