@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bioinformatics on Wlecome to Wang Chao&#39;s blog</title>
-    <link>http://netwchao.gitee.io/netwchao.gitee.io/categories/bioinformatics/</link>
+    <link>http://netwchao.gitee.io/categories/bioinformatics/</link>
     <description>Recent content in Bioinformatics on Wlecome to Wang Chao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2019, Weru and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://netwchao.gitee.io/netwchao.gitee.io/categories/bioinformatics/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://netwchao.gitee.io/categories/bioinformatics/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>文献阅读1</title>
-      <link>http://netwchao.gitee.io/netwchao.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</link>
+      <link>http://netwchao.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/netwchao.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</guid>
+      <guid>http://netwchao.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</guid>
       <description>整合小鼠和人类遗传数据可鉴定胆固醇代谢中的致病基因(Cell Metabolism)  Genome-Wide Mouse Liver Co-expression Network Analysis  These data are collected from more than 900 unique mice and are composed of 12 distinct datasets based on sex, dietary intervention, and molecular trait In 11 of 12 datasets, we were able to identify a module of genes significantly enriched for the Gene Ontology (GO) term, cholesterol biosynthetic process With the 2,435unique genes, we identified genes that were replicated acrosscholesterol modules in more than three datasets at the transcript level, more than two datasets at the protein level, or present in both transcript and protein datasets.</description>
     </item>
     
     <item>
       <title>ATAC-seq学习资料整理</title>
-      <link>http://netwchao.gitee.io/netwchao.gitee.io/post/atac-seq/</link>
+      <link>http://netwchao.gitee.io/post/atac-seq/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/netwchao.gitee.io/post/atac-seq/</guid>
+      <guid>http://netwchao.gitee.io/post/atac-seq/</guid>
       <description>ATAC-seq学习  学习资料收集   用Y叔的ChIPseeker对peaks进行注释和可视化用IDR对重复样本peaks的一致性进行了评估，同时得到了merge后的一致性的peaks——sample-idr，接下来就是对peaks的注释。    基因组各种版本对应关系    用IDR软件处理生物学重复的peak    ATAC标准流程encode项目发布    Homer找DNA的motif    ATAC-seq 分析（上）    motif分析——从实战到原理（Homer篇）    2020-04-09重新学习Y叔的ChIPseeker系列    第9篇：差异peaks分析——DiffBind    CHIP-SEQ 芯片分析时，对于来自重复实验的数据，怎样进行MACS peaks calling 分析？    第6篇：重复样本的处理——IDR    学习一遍ChIPseeker的使用    参考基因和注释文件下载地址ENSEMBLE    用MACS2软件call peaks    GEO数据挖掘小尝试：（三）利用clusterProfiler进行富集分析    1.</description>
     </item>
     
     <item>
       <title>Fine mapping</title>
-      <link>http://netwchao.gitee.io/netwchao.gitee.io/post/fine-mapping/</link>
+      <link>http://netwchao.gitee.io/post/fine-mapping/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/netwchao.gitee.io/post/fine-mapping/</guid>
+      <guid>http://netwchao.gitee.io/post/fine-mapping/</guid>
       <description>Fine mapping  精细定位 【生物大数据】统计方法在生物信息学“精细定位”（fine-mapping）中的应用
 GWAS研究基本概念2——Fine mapping
 Strategies for fine-mapping complex traits
@@ -49,10 +49,10 @@ GWAS: 网页版的基因型填充（genotypeimputation）
     
     <item>
       <title>关于测序数据质控</title>
-      <link>http://netwchao.gitee.io/netwchao.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
+      <link>http://netwchao.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/netwchao.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</guid>
+      <guid>http://netwchao.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</guid>
       <description>关于测序数据质控  学习资料收集   1.3质控结果解读   质控软件fastqc官网FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis. The main functions of FastQC are：</description>
     </item>
     
