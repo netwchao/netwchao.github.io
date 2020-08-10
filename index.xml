@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wlecome to Wang Chao&#39;s blog</title>
-    <link>https://Wchao.lab.gitee.io/</link>
+    <link>http://netwchao.gitee.io/</link>
     <description>Recent content on Wlecome to Wang Chao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2019, Weru and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Sun, 25 Aug 2019 00:52:59 +0300</lastBuildDate>
     
-	<atom:link href="https://Wchao.lab.gitee.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://netwchao.gitee.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>eQTL</title>
-      <link>https://Wchao.lab.gitee.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <link>http://netwchao.gitee.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</link>
       <pubDate>Sun, 02 Aug 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Wchao.lab.gitee.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <guid>http://netwchao.gitee.io/post/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
       <description>eQTL的概念 表达数量性状基因座（expression Quantitative Trait Loci,eQTL）是对上述概念的进一步深化，它指的是染色体上一些能特定调控mRNA和蛋白质表达水平的区域，其mRNA/蛋白质的表达水平量与数量性状成比例关系。eQTL可分为顺式作用eQTL和反式作用eQTL，顺式作用eQTL就是某个基因的eQTL定位到该基因所在的基因组区域，表明可能是该基因本身的差别引起的mRNA水平变化；反式作用eQTL是指某个基因的eQTL定位到其他基因组区域，表明其他基因的差别控制该基因mRNA水平的差异。
 eQTL就是把基因表达作为一种性状,研究遗传突变与基因表达的相关性: 就好像研究遗传突变与身高的相关性一样
 早年可以通过同时做一个个体的SNP芯片和cDNA芯片, 在全基因组尺度研究突变与表达的相关性, 这种研究需要较多个体(例如1000个); 现在随着深度测序的出现,很多人开始用RNA-Seq在较少量个体中研究allele-specific expression,本质上就是eQTL.
@@ -25,28 +25,28 @@ eQTL就是把基因表达作为一种性状,研究遗传突变与基因表达的
     
     <item>
       <title>文献阅读1</title>
-      <link>https://Wchao.lab.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</link>
+      <link>http://netwchao.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Wchao.lab.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</guid>
+      <guid>http://netwchao.gitee.io/post/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB1/</guid>
       <description>整合小鼠和人类遗传数据可鉴定胆固醇代谢中的致病基因(Cell Metabolism)  Genome-Wide Mouse Liver Co-expression Network Analysis  These data are collected from more than 900 unique mice and are composed of 12 distinct datasets based on sex, dietary intervention, and molecular trait In 11 of 12 datasets, we were able to identify a module of genes significantly enriched for the Gene Ontology (GO) term, cholesterol biosynthetic process With the 2,435unique genes, we identified genes that were replicated acrosscholesterol modules in more than three datasets at the transcript level, more than two datasets at the protein level, or present in both transcript and protein datasets.</description>
     </item>
     
     <item>
       <title>ATAC-seq学习资料整理</title>
-      <link>https://Wchao.lab.gitee.io/post/atac-seq/</link>
+      <link>http://netwchao.gitee.io/post/atac-seq/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Wchao.lab.gitee.io/post/atac-seq/</guid>
+      <guid>http://netwchao.gitee.io/post/atac-seq/</guid>
       <description>ATAC-seq学习  学习资料收集   用Y叔的ChIPseeker对peaks进行注释和可视化用IDR对重复样本peaks的一致性进行了评估，同时得到了merge后的一致性的peaks——sample-idr，接下来就是对peaks的注释。    基因组各种版本对应关系    用IDR软件处理生物学重复的peak    ATAC标准流程encode项目发布    Homer找DNA的motif    ATAC-seq 分析（上）    motif分析——从实战到原理（Homer篇）    2020-04-09重新学习Y叔的ChIPseeker系列    第9篇：差异peaks分析——DiffBind    CHIP-SEQ 芯片分析时，对于来自重复实验的数据，怎样进行MACS peaks calling 分析？    第6篇：重复样本的处理——IDR    学习一遍ChIPseeker的使用    参考基因和注释文件下载地址ENSEMBLE    用MACS2软件call peaks    GEO数据挖掘小尝试：（三）利用clusterProfiler进行富集分析    1.</description>
     </item>
     
     <item>
       <title>Fine mapping</title>
-      <link>https://Wchao.lab.gitee.io/post/fine-mapping/</link>
+      <link>http://netwchao.gitee.io/post/fine-mapping/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Wchao.lab.gitee.io/post/fine-mapping/</guid>
+      <guid>http://netwchao.gitee.io/post/fine-mapping/</guid>
       <description>Fine mapping  精细定位 【生物大数据】统计方法在生物信息学“精细定位”（fine-mapping）中的应用
 GWAS研究基本概念2——Fine mapping
 Strategies for fine-mapping complex traits
@@ -61,28 +61,28 @@ GWAS: 网页版的基因型填充（genotypeimputation）
     
     <item>
       <title>关于测序数据质控</title>
-      <link>https://Wchao.lab.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
+      <link>http://netwchao.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Wchao.lab.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</guid>
+      <guid>http://netwchao.gitee.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</guid>
       <description>关于测序数据质控  学习资料收集   1.3质控结果解读   质控软件fastqc官网FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis. The main functions of FastQC are：</description>
     </item>
     
     <item>
       <title>Blog building</title>
-      <link>https://Wchao.lab.gitee.io/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</link>
+      <link>http://netwchao.gitee.io/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Wchao.lab.gitee.io/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</guid>
+      <guid>http://netwchao.gitee.io/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</guid>
       <description>Website construction During the master&amp;rsquo;s study, when facing various difficulties in finding various learning materials, I can always break into the blogs of some professional bigwigs. The blog posts are rich in content and the web pages are cool. I would like to thank them for providing them for my study. help. Is also influenced by the big brothers,I also have the idea of building a blog. After all, I have to keep up with the big guys and find a platform for publicity.</description>
     </item>
     
     <item>
       <title>Blogger&#39;s Profile</title>
-      <link>https://Wchao.lab.gitee.io/about/</link>
+      <link>http://netwchao.gitee.io/about/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://Wchao.lab.gitee.io/about/</guid>
+      <guid>http://netwchao.gitee.io/about/</guid>
       <description>The blogger is currently a PhD student, and his main research direction is bioinformatics.
  BACKGROUND
  Huazhong Agricultural University-Shenzhen Institute of Genomics, Co-cultivation PhD student Huazhong Agricultural University，Animal genetic breeding and reproduction，Master of Agriculture Hunan Agricultural University，Animal Science，Bachelor of Agriculture   GitHub详情.</description>
