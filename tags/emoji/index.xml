@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emoji on Wlecome to Wang Chao&#39;s blog</title>
-    <link>http://netwchao.gitee.io/tags/emoji/</link>
+    <link>/tags/emoji/</link>
     <description>Recent content in emoji on Wlecome to Wang Chao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2019, Weru and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Mon, 13 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://netwchao.gitee.io/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog building</title>
-      <link>http://netwchao.gitee.io/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</link>
+      <link>/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</link>
       <pubDate>Mon, 13 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</guid>
+      <guid>/post/%E5%8D%9A%E5%AE%A2%E6%88%90%E7%AB%8B/</guid>
       <description>Website construction During the master&amp;rsquo;s study, when facing various difficulties in finding various learning materials, I can always break into the blogs of some professional bigwigs. The blog posts are rich in content and the web pages are cool. I would like to thank them for providing them for my study. help. Is also influenced by the big brothers,I also have the idea of building a blog. After all, I have to keep up with the big guys and find a platform for publicity.</description>
     </item>
     

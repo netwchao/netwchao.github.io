@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Wlecome to Wang Chao&#39;s blog</title>
-    <link>http://netwchao.gitee.io/categories/</link>
+    <link>/categories/</link>
     <description>Recent content in Categories on Wlecome to Wang Chao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2019, Weru and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Sat, 25 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://netwchao.gitee.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Bioinformatics</title>
-      <link>http://netwchao.gitee.io/categories/bioinformatics/</link>
+      <link>/categories/bioinformatics/</link>
       <pubDate>Sat, 25 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/categories/bioinformatics/</guid>
+      <guid>/categories/bioinformatics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>golang</title>
-      <link>http://netwchao.gitee.io/categories/golang/</link>
+      <link>/categories/golang/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/categories/golang/</guid>
+      <guid>/categories/golang/</guid>
       <description></description>
     </item>
     
