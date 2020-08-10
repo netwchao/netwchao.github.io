@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>golang on Wlecome to Wang Chao&#39;s blog</title>
-    <link>http://netwchao.gitee.io/netwchao.github.io/categories/golang/</link>
+    <link>https://netwchao.github.io/categories/golang/</link>
     <description>Recent content in golang on Wlecome to Wang Chao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2019, Weru and the Hugo Authors; all rights reserved.</copyright>
     <lastBuildDate>Wed, 15 Jul 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="http://netwchao.gitee.io/netwchao.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://netwchao.github.io/categories/golang/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>关于测序数据质控</title>
-      <link>http://netwchao.gitee.io/netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
+      <link>https://netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</link>
       <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
       
-      <guid>http://netwchao.gitee.io/netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</guid>
+      <guid>https://netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</guid>
       <description>关于测序数据质控  学习资料收集   1.3质控结果解读   质控软件fastqc官网FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis. The main functions of FastQC are：</description>
     </item>
     
