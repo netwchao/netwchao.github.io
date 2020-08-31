@@ -13,11 +13,6 @@
   </url>
   
   <url>
-    <loc>https://netwchao.github.io/tags/bioinformatics/</loc>
-    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://netwchao.github.io/categories/bioinformatics/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
   </url>
@@ -28,17 +23,7 @@
   </url>
   
   <url>
-    <loc>https://netwchao.github.io/tags/life/</loc>
-    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://netwchao.github.io/tags/literary/</loc>
-    <lastmod>2020-07-25T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://netwchao.github.io/tags/skills/</loc>
     <lastmod>2020-07-25T00:00:00+00:00</lastmod>
   </url>
   
@@ -58,12 +43,27 @@
   </url>
   
   <url>
+    <loc>https://netwchao.github.io/tags/bioinformatics/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://netwchao.github.io/post/fine-mapping/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://netwchao.github.io/categories/golang/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://netwchao.github.io/tags/life/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://netwchao.github.io/tags/skills/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
