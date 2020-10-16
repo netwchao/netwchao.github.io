@@ -6,10 +6,44 @@
     <description>Recent content in Posts on Wlecome to Wang Chao&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright © 2019, Weru and the Hugo Authors; all rights reserved.</copyright>
-    <lastBuildDate>Sun, 02 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 16 Oct 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://netwchao.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>学习资料整理</title>
+      <link>https://netwchao.github.io/post/%E7%BD%91%E9%A1%B5%E8%B5%84%E6%96%99/</link>
+      <pubDate>Fri, 16 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/%E7%BD%91%E9%A1%B5%E8%B5%84%E6%96%99/</guid>
+      <description>精细定位 【生物大数据】统计方法在生物信息学“精细定位”（fine-mapping）中的应用
+ 基因型填充 基因型填充(Genotype-Imputation)：从原理到操作
+基因型填充是怎么回事？
+缺失基因型填充
+GWAS: 网页版的基因型填充（genotypeimputation）
+GWAS中的名称概念
+最大参考序列集助力基因型推断
+测序 WGS学习笔记
+缺失基因型填充
+CHIP-seq的input
+生信软件 conda管理生信软件一文就够
+samtools的安装和使用
+##galaxy https://galaxyproject.org/learn/
+Liunx https://www.jb51.net/article/56563.htm
+博客 http://www.360doc.com/userhome.aspx?userid=42030643
+samtools view  flag https://blog.csdn.net/weixin_44452187/article/details/87854926  samtools flagstat https://www.jianshu.com/p/b8fe6eaa35bf https://www.codeleading.com/article/1111667975/ https://www.omicsclass.com/article/241
+找启动子 一文教会你查找基因的启动子、UTR、TSS等区域以及预测转录因子结合位点
+MACS2
+宽峰还是窄峰
+组蛋白chip分析的两个要点
+峰
+homer注释peak
+如何通过CHIP-seq分析鉴别基因启动子和增强子
+基因组和基因组注释文件下载
+NGS数据格式BED/GFF/GTF之介绍，比较，转换
+一行命令实现 GTF 到BED的格式转换</description>
+    </item>
     
     <item>
       <title>eQTL</title>
