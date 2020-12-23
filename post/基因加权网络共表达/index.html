@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+  <title>基因加权网络共表达 | Wlecome to Wang Chao&#39;s blog</title>
+  <meta charset='utf-8'>
+  <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+  <meta http-equiv = 'X-UA-Compatible' content = 'IE=edge'>
+<meta name = 'keywords' content = 'Wlecome to Wang Chao&#39;s blog'>
+<meta property = 'og:locale' content = 'en_US' />
+<meta property = 'og:type' content = 'article' />
+<meta property = 'og:title' content = '基因加权网络共表达' />
+<meta property = 'og:description' content = '基因加权网络共表达  基因加权网络共表达 1 2 3 4  #BiocManager::install(c(&#34;AnnotationDbi&#34;, &#34;impute&#34;,&#34;GO.db&#34;, &#34;preprocessCore&#34;)) …'>
+<meta property = 'og:url' content = 'https://netwchao.github.io/post/%E5%9F%BA%E5%9B%A0%E5%8A%A0%E6%9D%83%E7%BD%91%E7%BB%9C%E5%85%B1%E8%A1%A8%E8%BE%BE/' />
+<meta property = 'og:image' content = 'https://netwchao.github.io/images/artist.jpg'/>
+<link rel='apple-touch-icon' sizes='180x180' href='https://netwchao.github.io/images/icons/apple-touch-icon.png'>
+<link rel='icon' type='image/png' sizes='32x32' href='https://netwchao.github.io/images/icons/favicon-32x32.png'>
+<link rel='icon' type='image/png' sizes='16x16' href='https://netwchao.github.io/images/icons/favicon-16x16.png'>
+<link rel='manifest' href='https://netwchao.github.io/images/icons/site.webmanifest'>
+<meta name='msapplication-TileColor' content='#da532c'>
+<meta name='theme-color' content='#ffffff'>
+
+  <link rel='canonical' href='https://netwchao.github.io/post/%E5%9F%BA%E5%9B%A0%E5%8A%A0%E6%9D%83%E7%BD%91%E7%BB%9C%E5%85%B1%E8%A1%A8%E8%BE%BE/'>
+  <link rel = 'stylesheet' href = 'https://netwchao.github.io/css/main.fd1b52c15e94a2823f837dcf6644426493d148448ae3cdef45af631024456781e69564507e29a0e8a35ab6266cb5974acfc5b59bf86943662cab24d15ce2c3a0.css' integrity = 'sha512-/RtSwV6UooI/g33PZkRCZJPRSESK483vRa9jECRFZ4HmlWRQfimg6KNatiZstZdKz8W1m/hpQ2YsqyTRXOLDoA=='>
+</head>
+
+  <body>
+    <div class = 'nav-drop'>
+  <div class = 'nav-body'>
+      <a href = 'https://netwchao.github.io/about/' class = 'nav_item'>About</a>
+      <a href = 'https://netwchao.github.io/' class = 'nav_item'>Blog</a>
+      <a href = 'https://netwchao.github.io/categories' class = 'nav_item'>Category</a>
+      <a href = 'https://netwchao.github.io/tags' class = 'nav_item'>Tag</a>
+    <div class = 'nav-close'></div><div class = 'color_mode'>
+<label for = 'mode'>Toggle Dark Mode</label>
+<input type = 'checkbox' class = 'color_choice' id = 'mode'>
+</div>
+
+  </div>
+</div><header class = 'nav' >
+  <nav class = 'nav-menu'>
+    <a href='https://netwchao.github.io/' class = 'nav-brand nav_item'>Wlecome to Wang Chao&#39;s blog</a>
+    <div class = 'nav_bar-wrap'>
+      <div class = 'nav_bar'></div>
+    </div>
+  </nav>
+</header>
+
+
+    <main>
+      
+  <div class = 'wrap mt post'>
+    <div><p class = 'post_date pale'>15. July 2020</p>
+      <h1 class = 'post_title'>基因加权网络共表达</h1>
+      <div class = 'post_body'>
+        <div class = 'post_inner'>
+        
+          <img src = 'https://netwchao.github.io/images/artist.jpg' alt = 'artist.jpg' class = 'post_thumbnail'>
+        
+          <h1 id="center基因加权网络共表达center"><!-- raw HTML omitted -->基因加权网络共表达<!-- raw HTML omitted --></h1>
+<hr>
+<h2 id="center-基因加权网络共表达center"><!-- raw HTML omitted --> 基因加权网络共表达<!-- raw HTML omitted --></h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#BiocManager::install(c(&#34;AnnotationDbi&#34;, &#34;impute&#34;,&#34;GO.db&#34;, &#34;preprocessCore&#34;))
+#install.packages(c(&#34;matrixStats&#34;, &#34;Hmisc&#34;,&#34;foreach&#34;, &#34;doParallel&#34;, &#34;fastcluster&#34;, &#34;dynamicTreeCut&#34;, &#34;survival&#34;))
+#install.packages(c(&#34;WGCNA&#34;, &#34;stringr&#34;, &#34;reshape2&#34;))
+
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">library(WGCNA)
+setwd(&#34;/storage2/wangchao/jupyter/WGCNA&#34;)
+options(stringsAsFactors = FALSE)
+femData = read.csv(&#34;LTE.csv&#34;)
+dim(femData)
+head(femData)
+
+datExpr0 = as.data.frame(t(femData[, -c(1:2)]))
+head(datExpr0)
+
+names(datExpr0) = femData$Symbol;
+rownames(datExpr0) = names(femData)[-c(1:2)];
+head(datExpr0)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="数据清洗">数据清洗</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">gsg = goodSamplesGenes(datExpr0, verbose = 3)
+gsg$allOK;
+if (!gsg$allOK)
+{
+    # Optionally, print the gene and sample names that were removed:
+    # 打印删除的基因和样本名称
+    if (sum(!gsg$goodGenes)&gt;0)
+        printFlush(paste(&#34;Removing genes:&#34;, paste(names(datExpr0)[!gsg$goodGenes], collapse = &#34;, &#34;)));
+    if (sum(!gsg$goodSamples)&gt;0)
+        printFlush(paste(&#34;Removing samples:&#34;, paste(rownames(datExpr0)[!gsg$goodSamples], collapse = &#34;, &#34;)));
+    # Remove the offending genes and samples from the data:
+    # 从数据中删除有问题的基因和样本
+    datExpr0 = datExpr0[gsg$goodSamples, gsg$goodGenes]
+}
+head(datExpr0)
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># 接下来我们对样本进行聚类（与随后的基因聚类相比），看看是否有明显的异常值。
+# hclusts聚类算法, dist计算基因之间的距离
+sampleTree = hclust(dist(datExpr0), method = &#34;average&#34;);
+# Plot the sample tree: Open a graphic output window of size 12 by 9 inches
+# The user should change the dimensions if the window is too large or too small.
+# 绘制聚类树，sizeGrWindow设置绘图窗口大小
+# sizeGrWindow(16,9)
+
+# 设置文字大小
+par(cex = 0.5);
+# 设置图像边距c(bottom, left, top, right) 
+# par(mar = c(0,4,2,0))
+# 画图 main标题，sub子标题，xlab x轴标题，cex.lab标题字体大小，cex.axis坐标轴刻度大小，cex.main主标题字体
+plot(sampleTree, main = &#34;Sample clustering to detect outliers&#34;, sub=&#34;&#34;, xlab=&#34;&#34;, cex.lab = 1.5, cex.axis = 1.5, cex.main = 2)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="确定power">确定power</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">powers = c(c(1:10), seq(from = 12, to=20, by=2))
+# Call the network topology analysis function
+sft = pickSoftThreshold(datExpr0, powerVector = powers, verbose = 5)
+#设置网络构建参数选择范围，计算无尺度分布拓扑矩阵
+
+  # Plot the results:
+  ##sizeGrWindow(9, 5)
+  par(mfrow = c(1,2));
+  cex1 = 0.9;
+  # Scale-free topology fit index as a function of the soft-thresholding power
+  plot(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+       xlab=&#34;Soft Threshold (power)&#34;,ylab=&#34;Scale Free Topology Model Fit,signed R^2&#34;,type=&#34;n&#34;,
+       main = paste(&#34;Scale independence&#34;));
+  text(sft$fitIndices[,1], -sign(sft$fitIndices[,3])*sft$fitIndices[,2],
+       labels=powers,cex=cex1,col=&#34;red&#34;);
+  # this line corresponds to using an R^2 cut-off of h
+  abline(h=0.9,col=&#34;red&#34;)
+  # Mean connectivity as a function of the soft-thresholding power
+  plot(sft$fitIndices[,1], sft$fitIndices[,5],
+       xlab=&#34;Soft Threshold (power)&#34;,ylab=&#34;Mean Connectivity&#34;, type=&#34;n&#34;,
+       main = paste(&#34;Mean connectivity&#34;))
+  text(sft$fitIndices[,1], sft$fitIndices[,5], labels=powers, cex=cex1,col=&#34;red&#34;)
+  sft
+  
+  cor &lt;- WGCNA::cor
+net = blockwiseModules(
+				 datExpr0,
+				 power = 6,
+				 maxBlockSize = 6000,
+				 TOMType = &#34;unsigned&#34;, minModuleSize = 30,
+				 reassignThreshold = 0, mergeCutHeight = 0.25,
+				 numericLabels = TRUE, pamRespectsDendro = FALSE,
+				 saveTOMs = F, 
+				 verbose = 3
+ )
+ table(net$colors) 
+ 
+ #绘画结果展示### open a graphics window
+#sizeGrWindow(12, 30)
+# Convert labels to colors for plotting
+mergedColors = labels2colors(net$colors)
+# Plot the dendrogram and the module colors underneath
+plotDendroAndColors(net$dendrograms[[1]], mergedColors[net$blockGenes[[1]]],&#34;Module colors&#34;,
+                    dendroLabels = FALSE, hang = 0.03,
+                    addGuide = TRUE, guideHang = 0.05)
+					
+##结果保存###
+moduleLabels = net$colors
+moduleColors = labels2colors(net$colors)
+table(moduleColors)
+MEs = net$MEs;
+geneTree = net$dendrograms[[1]];
+save(MEs, moduleLabels, moduleColors, geneTree,
+     file = &#34;changbai.RData&#34;)
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="提取模块内基因">提取模块内基因</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">color&lt;-moduleColors[!duplicated(moduleColors)]
+for (i in color){
+  # Select module
+  module = i;
+  # Select module probes
+  probes = colnames(datExpr0) ## 我们例子里面的probe就是基因
+  inModule = (moduleColors==i);
+  modProbes = probes[inModule]; 
+summary(modProbes)
+write.csv(modProbes,paste0(&#34;/storage2/wangchao/jupyter/WGCNA/LTE.module/&#34;,i,&#34;.csv&#34;))}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="模块内基因go注释">模块内基因GO注释</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">#BiocManager::install(&#34;topGO&#34;)
+#BiocManager::install(&#34;clusterProfiler&#34;)
+#BiocManager::install(&#34;org.Ss.eg.db&#34;)
+library(&#39;topGO&#39;)
+library(clusterProfiler)
+library( org.Ss.eg.db)
+setwd(&#34;/storage2/wangchao/jupyter/WGCNA/LTE.module&#34;)
+temp = list.files(pattern=&#34;*.csv&#34;)
+temp
+for (i in temp){
+    data&lt;-read.csv(paste0(&#34;/storage2/wangchao/jupyter/WGCNA/LTE.module/&#34;,i))
+gene&lt;-data[,2]
+head(gene)
+gene = bitr(gene, fromType=&#34;SYMBOL&#34;, toType=&#34;ENTREZID&#34;, OrgDb=&#34;org.Ss.eg.db&#34;)
+X&lt;-gene$ENTREZID
+head(X)
+go &lt;- enrichGO(X, OrgDb = org.Ss.eg.db, ont=&#39;ALL&#39;,pAdjustMethod = &#39;BH&#39;,pvalueCutoff = 0.05, 
+               qvalueCutoff = 0.05,keyType = &#39;ENTREZID&#39;)
+write.csv(go,paste0(&#34;/storage2/wangchao/jupyter/WGCNA/LTE.module/GO/&#34;,i))
+}
+</code></pre></td></tr></table>
+</div>
+</div>
+        </div>
+        <div class ='post_extra mb-2'>
+          <div class = 'copy'></div>
+
+        </div>
+        <div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href = 'https://netwchao.github.io/' class = 'post_nav'><span class = 'post_next'>The Latest</span>T</a>
+
+    </main>
+    <footer class = 'footer wrap pale'>
+  <p>&copy;&nbsp;<span class = 'year'></span>&nbsp;Wlecome to Wang Chao&#39;s blog</p>
+  <p>Designed by  <a href = 'https://www.linkedin.com/in/dan-weru-profile/' target = '_blank' title = 'Linkedin Profile' rel = 'nonopener'>Weru</a></p>
+</footer>
+
+
+<script src = 'https://netwchao.github.io/js/index.min.8aecb45303cba13ff3505b0722963b9a9d1d65fb1093581f956b5e5a5337a5ed015349a5d910b0c1bf9028e74ce18ae1c98e148503767b4c3e38cfb7242c312b.js'></script>
+
+  </body>
+</html>

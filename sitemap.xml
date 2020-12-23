@@ -58,12 +58,12 @@
   </url>
   
   <url>
-    <loc>https://netwchao.github.io/categories/golang/</loc>
+    <loc>https://netwchao.github.io/tags/life/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://netwchao.github.io/tags/life/</loc>
+    <loc>https://netwchao.github.io/categories/life/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   
@@ -74,6 +74,11 @@
   
   <url>
     <loc>https://netwchao.github.io/post/%E5%85%B3%E4%BA%8E%E6%B5%8B%E5%BA%8F%E6%95%B0%E6%8D%AE%E8%B4%A8%E6%8E%A7/</loc>
+    <lastmod>2020-07-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://netwchao.github.io/post/%E5%9F%BA%E5%9B%A0%E5%8A%A0%E6%9D%83%E7%BD%91%E7%BB%9C%E5%85%B1%E8%A1%A8%E8%BE%BE/</loc>
     <lastmod>2020-07-15T00:00:00+00:00</lastmod>
   </url>
   

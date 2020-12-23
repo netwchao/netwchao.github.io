@@ -90,5 +90,14 @@ GWAS: 网页版的基因型填充（genotypeimputation）
       <description>关于测序数据质控  学习资料收集   1.3质控结果解读   质控软件fastqc官网FastQC aims to provide a simple way to do some quality control checks on raw sequence data coming from high throughput sequencing pipelines. It provides a modular set of analyses which you can use to give a quick impression of whether your data has any problems of which you should be aware before doing any further analysis. The main functions of FastQC are：</description>
     </item>
     
+    <item>
+      <title>基因加权网络共表达</title>
+      <link>https://netwchao.github.io/post/%E5%9F%BA%E5%9B%A0%E5%8A%A0%E6%9D%83%E7%BD%91%E7%BB%9C%E5%85%B1%E8%A1%A8%E8%BE%BE/</link>
+      <pubDate>Wed, 15 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://netwchao.github.io/post/%E5%9F%BA%E5%9B%A0%E5%8A%A0%E6%9D%83%E7%BD%91%E7%BB%9C%E5%85%B1%E8%A1%A8%E8%BE%BE/</guid>
+      <description>基因加权网络共表达  基因加权网络共表达 1 2 3 4  #BiocManager::install(c(&amp;#34;AnnotationDbi&amp;#34;, &amp;#34;impute&amp;#34;,&amp;#34;GO.db&amp;#34;, &amp;#34;preprocessCore&amp;#34;)) #install.packages(c(&amp;#34;matrixStats&amp;#34;, &amp;#34;Hmisc&amp;#34;,&amp;#34;foreach&amp;#34;, &amp;#34;doParallel&amp;#34;, &amp;#34;fastcluster&amp;#34;, &amp;#34;dynamicTreeCut&amp;#34;, &amp;#34;survival&amp;#34;)) #install.packages(c(&amp;#34;WGCNA&amp;#34;, &amp;#34;stringr&amp;#34;, &amp;#34;reshape2&amp;#34;))   1 2 3 4 5 6 7 8 9 10 11 12 13  library(WGCNA) setwd(&amp;#34;/storage2/wangchao/jupyter/WGCNA&amp;#34;) options(stringsAsFactors = FALSE) femData = read.csv(&amp;#34;LTE.csv&amp;#34;) dim(femData) head(femData) datExpr0 = as.data.frame(t(femData[, -c(1:2)])) head(datExpr0) names(datExpr0) = femData$Symbol; rownames(datExpr0) = names(femData)[-c(1:2)]; head(datExpr0)   数据清洗 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  gsg = goodSamplesGenes(datExpr0, verbose = 3) gsg$allOK; if (!</description>
+    </item>
+    
   </channel>
 </rss>
